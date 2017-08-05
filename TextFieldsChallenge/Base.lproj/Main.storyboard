@@ -48,6 +48,9 @@
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izg-20-fhd">
                                                 <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleTextEditor:" destination="BYZ-38-t0r" eventType="valueChanged" id="qMj-Iz-spw"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -80,7 +83,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="editingSwitch" destination="izg-20-fhd" id="Cv1-TE-oPe"/>
                         <outlet property="textFieldDollar" destination="X8L-gp-A7a" id="NU7-bM-12P"/>
+                        <outlet property="textFieldRandomColor" destination="hba-A7-dUx" id="ZJ3-lx-oYx"/>
                         <outlet property="textFieldZipCode" destination="jeq-j2-WnR" id="ww2-7T-BOs"/>
                     </connections>
                 </viewController>

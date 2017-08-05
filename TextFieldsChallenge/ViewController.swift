@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textFieldZipCode: UITextField!
     @IBOutlet weak var textFieldDollar: UITextField!
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     let zipCodeDelegate = ZipCodeTextFieldDelegate()
     let cashDelegate = CashTextFieldDelegate()
+    let randomCashDelegate = RandomColorTextFieldDelegate()
     
     
     override func viewDidLoad() {
@@ -24,6 +25,26 @@ class ViewController: UIViewController {
         
         textFieldZipCode.delegate = zipCodeDelegate
         textFieldDollar.delegate = cashDelegate
+        textFieldRandomColor.delegate = randomCashDelegate
+        
+        editingSwitch.setOn(false, animated: false)
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return self.editingSwitch.isOn
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true;
+    }
+
+    
+    @IBAction func toggleTextEditor(_ sender: Any) {
+        if !(sender as! UISwitch).isOn {
+            textFieldRandomColor.resignFirstResponder()
+        }
     }
 
 }
