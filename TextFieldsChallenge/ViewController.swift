@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textFieldZipCode: UITextField!
+    @IBOutlet weak var textFieldDollar: UITextField!
+    @IBOutlet weak var textFieldRandomColor: UITextField!
+    @IBOutlet weak var editingSwitch: UISwitch!
+    
+    let zipCodeDelegate = ZipCodeTextFieldDelegate()
+    let cashDelegate = CashTextFieldDelegate()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        textFieldZipCode.delegate = zipCodeDelegate
+        textFieldDollar.delegate = cashDelegate
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
