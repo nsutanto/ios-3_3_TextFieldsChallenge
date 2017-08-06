@@ -14,10 +14,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldDollar: UITextField!
     @IBOutlet weak var textFieldRandomColor: UITextField!
     @IBOutlet weak var editingSwitch: UISwitch!
+    @IBOutlet weak var textFieldEmoji: UITextField!
+    @IBOutlet weak var textFieldColor: UITextField!
+    @IBOutlet weak var textFieldCounter: UITextField!
+    
+    @IBOutlet weak var labelCounter: UILabel!
     
     let zipCodeDelegate = ZipCodeTextFieldDelegate()
     let cashDelegate = CashTextFieldDelegate()
-    let randomCashDelegate = RandomColorTextFieldDelegate()
+    let randomColorDelegate = RandomColorTextFieldDelegate()
+    let emojiTextFieldDelegate = EmojiTextFieldDelegate()
+    let colorTextFieldDelegate = ColorTextFieldDelegate()
     
     
     override func viewDidLoad() {
@@ -25,13 +32,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         textFieldZipCode.delegate = zipCodeDelegate
         textFieldDollar.delegate = cashDelegate
-        textFieldRandomColor.delegate = randomCashDelegate
+        textFieldRandomColor.delegate = randomColorDelegate
         
         editingSwitch.setOn(false, animated: false)
+    
+        textFieldRandomColor.isUserInteractionEnabled = editingSwitch.isOn
+        
+        textFieldEmoji.delegate = emojiTextFieldDelegate
+        textFieldColor.delegate = colorTextFieldDelegate
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        return self.editingSwitch.isOn
+        return editingSwitch.isOn
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -45,6 +57,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if !(sender as! UISwitch).isOn {
             textFieldRandomColor.resignFirstResponder()
         }
+        textFieldRandomColor.isUserInteractionEnabled = editingSwitch.isOn
+
     }
 
 }

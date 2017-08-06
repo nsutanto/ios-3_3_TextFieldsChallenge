@@ -15,6 +15,8 @@
 		032D8A761F35433800598ADA /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D8A751F35433800598ADA /* ZipCodeTextFieldDelegate.swift */; };
 		032D8A781F35474300598ADA /* CashTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D8A771F35474300598ADA /* CashTextFieldDelegate.swift */; };
 		032D8A7A1F354B0800598ADA /* RandomColorTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D8A791F354B0800598ADA /* RandomColorTextFieldDelegate.swift */; };
+		032D8A7C1F37C95E00598ADA /* EmojiTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D8A7B1F37C95E00598ADA /* EmojiTextFieldDelegate.swift */; };
+		032D8A7E1F37CA7400598ADA /* ColorTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D8A7D1F37CA7400598ADA /* ColorTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		032D8A751F35433800598ADA /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
 		032D8A771F35474300598ADA /* CashTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashTextFieldDelegate.swift; sourceTree = "<group>"; };
 		032D8A791F354B0800598ADA /* RandomColorTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColorTextFieldDelegate.swift; sourceTree = "<group>"; };
+		032D8A7B1F37C95E00598ADA /* EmojiTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTextFieldDelegate.swift; sourceTree = "<group>"; };
+		032D8A7D1F37CA7400598ADA /* ColorTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				032D8A651F353DBB00598ADA /* ViewController.swift */,
 				032D8A751F35433800598ADA /* ZipCodeTextFieldDelegate.swift */,
 				032D8A771F35474300598ADA /* CashTextFieldDelegate.swift */,
+				032D8A7B1F37C95E00598ADA /* EmojiTextFieldDelegate.swift */,
+				032D8A7D1F37CA7400598ADA /* ColorTextFieldDelegate.swift */,
 				032D8A671F353DBB00598ADA /* Main.storyboard */,
 				032D8A791F354B0800598ADA /* RandomColorTextFieldDelegate.swift */,
 				032D8A6A1F353DBB00598ADA /* Assets.xcassets */,
@@ -146,11 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032D8A7E1F37CA7400598ADA /* ColorTextFieldDelegate.swift in Sources */,
 				032D8A661F353DBB00598ADA /* ViewController.swift in Sources */,
 				032D8A781F35474300598ADA /* CashTextFieldDelegate.swift in Sources */,
 				032D8A761F35433800598ADA /* ZipCodeTextFieldDelegate.swift in Sources */,
 				032D8A641F353DBB00598ADA /* AppDelegate.swift in Sources */,
 				032D8A7A1F354B0800598ADA /* RandomColorTextFieldDelegate.swift in Sources */,
+				032D8A7C1F37C95E00598ADA /* EmojiTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
